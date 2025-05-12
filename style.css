@@ -1,0 +1,215 @@
+/* Reset und Basis-Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.top-header {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0.9;
+}
+
+/* Grundlayout */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f9fc;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0 1rem;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #34495e;
+}
+
+/* Formular */
+form {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+    color: #2c3e50;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #2ecc71;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #219150;
+}
+
+/* Footer */
+footer {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95rem;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Spezielle Abschnitts-Styles */
+fieldset[legend*="Netz"],
+fieldset[legend*="Transformator"] {
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-left: 5px solid #2c3e50;
+    margin-top: 40px;
+    position: relative;
+}
+
+fieldset[legend*="Netz"] legend,
+fieldset[legend*="Transformator"] legend {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    padding: 0 15px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #2c3e50;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+fieldset[legend*="Netz"] h4,
+fieldset[legend*="Transformator"] h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 20px 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+fieldset[legend*="Netz"] label[for],
+fieldset[legend*="Transformator"] label[for] {
+    font-weight: 500;
+    color: #495057;
+}
+
+fieldset[legend*="Netz"] input[type="number"],
+fieldset[legend*="Transformator"] input[type="number"] {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease-in-out;
+}
+
+fieldset[legend*="Netz"] input[type="number"]:focus,
+fieldset[legend*="Transformator"] input[type="number"]:focus {
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+}
+
+/* Unterabschnitte */
+fieldset[legend*="Netz"] div[style*="margin-left: 20px"],
+fieldset[legend*="Transformator"] div[style*="margin-left: 20px"] {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+  
