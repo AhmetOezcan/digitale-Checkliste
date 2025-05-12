@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Storage System Checkliste</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-header">
+    <img src="netlogo.jpg" alt="NET Logo" class="header-logo">
+    <div class="header-text">
+      <h1>Energy Storage System Checkliste</h1>
+      <p>Energiegemeinschaft mit Stromspeicher und Energiemanagement – Ziel: 100% Eigenenergieversorgung</p>
+    </div>
+  </header>
+
+  <h2>NET – Neue Energie Technik GmbH</h2>
+  <p>NET & SHINEYOUNG</p>
+
+  <form>
+    <fieldset>
+      <legend>Projekt</legend>
+      <label for="projektName">Projektname:</label>
+      <input type="text" id="projektName" name="projektName" required>
+    </fieldset>
+
+    <!-- Standort -->
+    <fieldset>
+      <legend>1. Standort</legend>
+      <label>Seehöhe:</label><br>
+      <input type="radio" name="seehoehe" value="<=2000m"> <= 2000m<br>
+      <input type="radio" name="seehoehe" value="2000-4000m"> 2000 – 4000m<br>
+      <input type="radio" name="seehoehe" value=">=4000m"> >= 4000m<br><br>
+
+      <label>Entfernung zur Küste:</label><br>
+      <input type="radio" name="kueste" value="<=1km"> <= 1 km<br>
+      <input type="radio" name="kueste" value=">1km"> > 1 km<br>
+    </fieldset>
+
+    <!-- Temperatur -->
+    <fieldset>
+      <legend>2. Temperaturbereich</legend>
+      <label for="tempMax">Max °C:</label>
+      <input type="number" id="tempMax" name="tempMax"><br><br>
+
+      <label for="tempMin">Min °C:</label>
+      <input type="number" id="tempMin" name="tempMin">
+    </fieldset>
+
+    <!-- Montage-Adresse -->
+    <fieldset>
+      <legend>3. Montage-Adresse</legend>
+      <label for="strasse">Straße und Hausnummer:</label>
+      <input type="text" id="strasse" name="strasse" required><br><br>
+
+      <label for="plz">Postleitzahl:</label>
+      <input type="text" id="plz" name="plz" required><br><br>
+
+      <label for="ort">Ort:</label>
+      <input type="text" id="ort" name="ort" required><br><br>
+
+      <label for="land">Land:</label>
+      <input type="text" id="land" name="land" required>
+    </fieldset>
+
+    <!-- Anforderungen -->
+    <fieldset>
+      <legend>4. Anforderungen an den Speicher</legend>
+      <label><input type="checkbox" name="anforderung" value="erneuerbare"> Erneuerbare Energie</label><br>
+      <label><input type="checkbox" name="anforderung" value="eigenversorgung"> Für die Eigenenergieversorgung</label><br>
+      <label><input type="checkbox" name="anforderung" value="stützenlast"> Spitzenlast Glättung</label><br>
+      <label><input type="checkbox" name="anforderung" value="frequenz"> Frequenzregulierung</label><br>
+      <label><input type="checkbox" name="anforderung" value="micronetze"> Micro Netze stabilisieren</label><br>
+      <label><input type="checkbox" name="anforderung" value="gemeinschaft"> Energiegemeinschaften</label><br>
+      <label><input type="checkbox" name="anforderung" value="notstrom"> Notstromversorgung</label><br>
+      <label><input type="checkbox" name="anforderung" value="insel"> Inselbetrieb</label><br>
+      <label><input type="checkbox" name="anforderung" value="verkauf"> Marktteilnahme Energieverkauf</label><br>
+      <label><input type="checkbox" name="anforderung" value="dynamisch"> Dynamische Strompreise nutzen</label><br>
+      <label><input type="checkbox" name="anforderung" value="regelenergie"> Regelenergie</label>
+    </fieldset>
+
+    <!-- C-Rate -->
+    <fieldset>
+      <legend>5. C-Rate von ESS</legend>
+      <input type="radio" name="crate" value="0.25C"> 0,25C<br>
+      <input type="radio" name="crate" value="0.5C"> 0,5C<br>
+      <input type="radio" name="crate" value="1C"> 1C<br>
+      <input type="radio" name="crate" value="2C"> 2C<br>
+      <input type="radio" name="crate" value="andere"> Andere<br><br>
+
+      <label for="crateBemerkung">Bemerkung:</label><br>
+      <textarea id="crateBemerkung" name="crateBemerkung" rows="4" cols="50" placeholder="Die C-Rate definiert den Anteil der Batterie Nennkapazität , die in oder geladen werden kann innerhalb einer bestimmten Zeit aus der Batterie entladen Zeitrahmen (z. B. 1 h)."></textarea>
+    </fieldset>
+
+    <!-- EMS-Anforderungen -->
+    <fieldset>
+      <legend>6. EMS-Anforderungen</legend>
+      <label>Bitte wählen Sie eine Option:</label><br><br>
+      <input type="radio" name="ems" value="vorhanden"> Vorhandenes EMS<br>
+      <input type="radio" name="ems" value="zugriff"> Greifen Sie auf das EMS des Kunden zu<br>
+      <input type="radio" name="ems" value="neu"> Neues EMS<br>
+    </fieldset>
+
+    <div class="section-heading">
+      <h2>Technische Spezifikationen</h2>
+    </div>
+
+    <!-- Netz -->
+    <fieldset>
+      <legend>1. Netz</legend>
+      <h4>1.1 Netz Information</h4>
+      <div style="margin-left: 20px;">
+        <label for="trafoLeistung">Transformator Leistung (kVA):</label><br>
+        <input type="number" id="trafoLeistung" name="trafoLeistung"><br><br>
+
+        <label>Netzfrequenz:</label><br>
+        <input type="radio" name="netzfrequenz" value="50Hz"> 50 Hz<br>
+        <input type="radio" name="netzfrequenz" value="60Hz"> 60 Hz<br><br>
+      </div>
+
+      <label><input type="checkbox" name="netz_1_2_aktiv"> 1.2 Wasserstoff-Elektrolyse</label><br>
+      <div style="margin-left: 20px;">
+        <label for="elektrolyseLeistung">Erzeugungsanlage Leistung (kW):</label><br>
+        <input type="number" id="elektrolyseLeistung" name="elektrolyseLeistung"><br><br>
+      </div>
+
+      <label><input type="checkbox" name="netz_1_3_aktiv"> 1.3 Energiegemeinschaft</label><br>
+      <div style="margin-left: 20px;">
+        <label for="leistungErzeugung">Leistung Erzeugung (kWh):</label><br>
+        <input type="number" id="leistungErzeugung" name="leistungErzeugung"><br><br>
+
+        <label for="leistungVerbrauch">Leistung Verbrauch (kWh):</label><br>
+        <input type="number" id="leistungVerbrauch" name="leistungVerbrauch"><br><br>
+      </div>
+
+      <label><input type="checkbox" name="netz_1_4_aktiv"> 1.4 Info Terminal ECDS</label><br>
+      <div style="margin-left: 20px;">
+        <label>Vorhanden:</label><br>
+        <input type="radio" name="infoTerminal" value="ja"> Ja<br>
+        <input type="radio" name="infoTerminal" value="nein"> Nein<br><br>
+      </div>
+
+      <label><input type="checkbox" name="netz_1_5_aktiv"> 1.5 Stromtankstelle</label><br>
+      <div style="margin-left: 20px;">
+        <label for="anzahlCharger">Wieviele Charger:</label><br>
+        <input type="number" id="anzahlCharger" name="anzahlCharger"><br><br>
+
+        <label for="leistungCharger">Leistung je Charger (kW):</label><br>
+        <input type="number" id="leistungCharger" name="leistungCharger"><br><br>
+
+        <label>Zugriff auf ECDS:</label><br>
+        <input type="radio" name="ecdsZugriff" value="ja"> Ja<br>
+        <input type="radio" name="ecdsZugriff" value="nein"> Nein<br>
+      </div>
+    </fieldset>
+
+    <!-- Energiequellen -->
+    <fieldset>
+      <legend>2. Transformator & Energiequellen</legend>
+
+      <label><input type="checkbox" name="trafo_2_1_aktiv"> 2.1 Alternatives Kraftwerk</label><br>
+      <div style="margin-left: 20px;">
+        <label for="altKraftwerk">Leistung (kVA):</label><br>
+        <input type="number" id="altKraftwerk" name="altKraftwerk"><br><br>
+      </div>
+
+      <label><input type="checkbox" name="trafo_2_2_aktiv"> 2.2 PV-Station</label><br>
+      <div style="margin-left: 20px;">
+        <label for="pvLeistung">Leistung (kWp):</label><br>
+        <input type="number" id="pvLeistung" name="pvLeistung"><br><br>
+      </div>
+
+      <label><input type="checkbox" name="trafo_2_3_aktiv"> 2.3 Generator</label><br>
+      <div style="margin-left: 20px;">
+        <label for="generatorLeistung">Leistung (kVA):</label><br>
+        <input type="number" id="generatorLeistung" name="generatorLeistung"><br><br>
+      </div>
+
+      <label><input type="checkbox" name="trafo_2_4_aktiv"> 2.4 Wasserstoff-Brennstoffzelle</label><br>
+      <div style="margin-left: 20px;">
+        <label for="brennstoffzelleLeistung">Leistung (kW):</label><br>
+        <input type="number" id="brennstoffzelleLeistung" name="brennstoffzelleLeistung"><br><br>
+      </div>
+
+      <label><input type="checkbox" name="trafo_2_5_aktiv"> 2.5 Energiespeicher-System</label><br>
+      <div style="margin-left: 20px;">
+        <label for="essWechselrichter">Wechselrichter Leistung (kW):</label><br>
+        <input type="number" id="essWechselrichter" name="essWechselrichter"><br><br>
+
+        <label for="essBatterie">Batterie-Energie (kWh):</label><br>
+        <input type="number" id="essBatterie" name="essBatterie"><br><br>
+
+        <label>Kühlung bzw. Heizungsart:</label><br>
+        <input type="radio" name="essKuehlung" value="keine"> Keine Anforderung<br>
+        <input type="radio" name="essKuehlung" value="fluessigkeit"> Flüssigkeitskühlung bzw. Heizung für Außenaufstellung<br>
+        <input type="radio" name="essKuehlung" value="luft"> Luftkühlung<br>
+      </div>
+    </fieldset>
+
+    <!-- Umsetzung -->
+    <fieldset>
+      <legend>3. Geplante Umsetzungszeit</legend>
+      <label for="umsetzungsDatum">Datum:</label><br>
+      <input type="date" id="umsetzungsDatum" name="umsetzungsDatum">
+    </fieldset>
+
+    <!-- Kontakt -->
+    <fieldset>
+      <legend>4. Kontakt</legend>
+      <label for="kontaktName">Name:</label><br>
+      <input type="text" id="kontaktName" name="kontaktName" required><br><br>
+
+      <label for="kontaktEmail">E-Mail:</label><br>
+      <input type="email" id="kontaktEmail" name="kontaktEmail" required><br><br>
+    </fieldset>
+
+    <!-- Absenden -->
+    <button type="submit">Checkliste absenden</button>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Kontakt:</strong></p>
+    <p>E-Mail: <a href="mailto:office@neue-energie-technik.net">office@neue-energie-technik.net</a></p>
+    <p>Telefon: <a href="tel:+436628211000">+43 662 821100-0</a></p>
+  </footer>
+
+</body>
+</html>
